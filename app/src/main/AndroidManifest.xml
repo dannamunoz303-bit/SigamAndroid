@@ -11,39 +11,120 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SSIGAM">
-
         <activity
             android:name=".PantallaInicio"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".InicioSesion" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".RecuperacionContrasenaCorreo" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".RecuperacionContrasenaCodigo" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".RecuperacionContrasenaConfirmar" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".InicioUsuario" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".UbicacionIncidente" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ElegirUbicacion" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".TipoEmergencia" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".DetallesIncidente" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".AdjuntarFotos" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ReporteExitoso" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".EstadoReporte" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".Notificaciones" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".InicioConductor" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".NuevaEmergencia" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".DetalleIncidente" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".NavegacionIncidente" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".EstadoServicio" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ReportarNovedad" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".PerfilConductor" android:exported="false" android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".HistorialServicios" android:exported="false" android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".InicioSesion"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RecuperacionContrasenaCorreo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RecuperacionContrasenaCodigo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RecuperacionContrasenaConfirmar"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".InicioUsuario"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UbicacionIncidente"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ElegirUbicacion"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TipoEmergencia"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DetallesIncidente"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AdjuntarFotos"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ReporteExitoso"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EstadoReporte"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Notificaciones"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".InicioConductor"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".NuevaEmergencia"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DetalleIncidente"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".NavegacionIncidente"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EstadoServicio"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ReportarNovedad"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".PerfilConductor"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".HistorialServicios"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Registrate"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Codigodeverificacion"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CodigoDeVerificacion"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Verificacion"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
+
 </manifest>
