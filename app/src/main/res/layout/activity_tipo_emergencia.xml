@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/layoutHeaderTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;-"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layoutTitulosHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvPaso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PASO 2 DE 4"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tvTipoEmergenciaHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Emergencia"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/viewLineaNaranja"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#FF5E1A"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollContenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Qué tipo de emergencia estás reportando?"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <GridLayout
+                android:id="@+id/gridEmergencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="5"
+                android:useDefaultMargins="true">
+
+                <LinearLayout
+                    android:id="@+id/cardAccidenteTransito"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgAccidente"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/carro" />
+
+                    <TextView
+                        android:id="@+id/txtAccidente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accidente de tránsito"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardEmergenciaCardiaca"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgCardiaca"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/corazon" />
+
+                    <TextView
+                        android:id="@+id/txtCardiaca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emergencia cardiaca"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardDificultadRespiratoria"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgRespiracion"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/respiracion" />
+
+                    <TextView
+                        android:id="@+id/txtRespiracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dificultad respiratoria"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardTrauma"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgTrauma"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/mas" />
+
+                    <TextView
+                        android:id="@+id/txtTrauma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trauma o herida grave"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardIncendio"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgIncendio"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/fuego" />
+
+                    <TextView
+                        android:id="@+id/txtIncendio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Incendio"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardParto"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgParto"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/feliz" />
+
+                    <TextView
+                        android:id="@+id/txtParto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parto / emergencia obstétrica"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardIntoxicacion"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgIntoxicacion"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/alerta" />
+
+                    <TextView
+                        android:id="@+id/txtIntoxicacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Intoxicación o envenenamiento"
+                        android:textSize="9sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardConvulsiones"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgConvulsiones"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/cabeza" />
+
+                    <TextView
+                        android:id="@+id/txtConvulsiones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Convulsiones"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardCaidaFractura"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgCaida"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/silla" />
+
+                    <TextView
+                        android:id="@+id/txtCaida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caída con fractura"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardViolencia"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgViolencia"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/violencia" />
+
+                    <TextView
+                        android:id="@+id/txtViolencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Violencia o agresión"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardPsiquiatrica"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgPsiquiatrica"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/mental" />
+
+                    <TextView
+                        android:id="@+id/txtPsiquiatrica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emergencia psiquiátrica"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cardOtro"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="#F5F5F5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtOtroIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="•••"
+                        android:textSize="22sp"
+                        android:textColor="#FF6A2E"/>
+
+                    <TextView
+                        android:id="@+id/txtOtro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro"
+                        android:textSize="11sp"
+                        android:textColor="#FF6A2E"/>
+
+                </LinearLayout>
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/etEspecificar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:text="Especifica el tipo de emergencia..."
+                android:textColor="#545454"
+                android:padding="12dp"
+                android:gravity="top" />
+
+            <Button
+                android:id="@+id/btnContinuar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="CONTINUAR"
+                android:textColor="#ffff"
+                android:background="@drawable/btn_redondo"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

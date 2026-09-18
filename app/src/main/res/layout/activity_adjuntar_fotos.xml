@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutHeaderTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;-"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layoutTitulosHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvPaso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PASO 4 DE 4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvAdjuntarFotosHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adjuntar Fotos"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/viewLineaNaranja"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#FF5E1A"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInstruccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="           Adjunta al menos una foto del lugar o la situación"
+        android:textSize="14sp"
+        android:padding="12dp" />
+
+    <LinearLayout
+        android:id="@+id/btnTomarFoto"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/fondofondo"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layoutIconCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCamara"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/camara" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTomarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomar foto o elegir de galería"
+            android:textColor="#FF5E1A"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutFotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <FrameLayout
+            android:id="@+id/frameFoto1"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp">
+
+            <ImageView
+                android:id="@+id/imgFoto1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/foto1" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameFoto2"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp">
+
+            <ImageView
+                android:id="@+id/imgFoto2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/foto2"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="ENVIAR REPORTE"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5E1A"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:backgroundTint="#ffff"
+            android:layout_height="50dp"
+            android:text="CANCELAR"
+            android:textColor="#000"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</LinearLayout>

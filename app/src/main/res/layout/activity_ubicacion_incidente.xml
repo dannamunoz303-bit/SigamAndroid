@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:text="←"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/layoutTituloHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtPaso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASO 1 DE 4"
+                android:textSize="11sp"
+                android:textColor="#888888"
+                android:letterSpacing="0.05"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTituloUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicacion del Incidente"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FF6A2E" />
+
+    <FrameLayout
+        android:id="@+id/layoutMapaContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E5E3DF">
+
+        <ImageView
+            android:id="@+id/imgMapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mapa"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/layoutPinCentro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtLabelCalle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:elevation="4dp"
+                android:text="Calle 5"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="12dp">
+
+        <TextView
+            android:id="@+id/txtConfirmarUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar Ubicación"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/layoutCardUbicacionActual"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:background="@drawable/cuadronaranja"
+            android:padding="11dp">
+
+            <ImageView
+                android:id="@+id/imgUbicacionActual"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ubicacion" />
+
+            <LinearLayout
+                android:id="@+id/layoutTextoUbicacionActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtMiUbicacionActual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mi ubicación actual"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/txtDireccionActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Calle 5 #9-23, cerca del Parque Caldas, Popayán"
+                    android:textSize="12sp"
+                    android:textColor="#444444" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnElegirOtraUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#F9F9F9"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+
+            <ImageView
+                android:id="@+id/imgbusqueda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/busqueda" />
+
+
+            <TextView
+                android:id="@+id/txtElegirOtraUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Elegir otra ubicación"
+                android:textSize="13sp"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btnContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/btn_redondo"
+            android:text="CONTINUAR"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

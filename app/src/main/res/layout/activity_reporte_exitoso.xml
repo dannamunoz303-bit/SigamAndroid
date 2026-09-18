@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutHeaderTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp">
+
+            <ImageView
+                android:id="@+id/imgLogoSuperior"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/superior" />
+
+            <TextView
+                android:id="@+id/txtSigam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="  SIGAM"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgCampana"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/campana" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/viewLineaNaranja"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FF5E1A"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnTomarFoto"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="90dp"
+        android:background="@drawable/ambulancia3"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtReporteEnviado"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="               Tu reporte fue enviado"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtGracias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Gracias por tu colaboración.Las han sido notificadas y están procesando la información"
+        android:textSize="14sp"
+        android:padding="12dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutReferencia"
+        android:layout_width="365dp"
+        android:layout_height="72dp"
+        android:layout_margin="20dp"
+        android:background="#F5F5F5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtLabelReferencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de referencia"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtReferencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="REF-74291"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="ESTADO DE REPORTE"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5E1A"/>
+
+        <Button
+            android:id="@+id/btnVolverInicio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="VOLVER AL INICIO"
+            android:textColor="#000"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</LinearLayout>

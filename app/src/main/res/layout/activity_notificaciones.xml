@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;-"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtNotificaciones"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="                     Notificaciones"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FF5E1A"/>
+
+    <LinearLayout
+        android:id="@+id/layoutContenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="19dp">
+
+        <LinearLayout
+            android:id="@+id/layoutNotificacion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutIcon1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvIcon1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/encamino"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:id="@+id/viewLineaIcon1"
+                    android:layout_width="1.5dp"
+                    android:layout_height="40dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTexto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutTituloTiempo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTitulo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ambulancia en camino"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/txtTiempo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hace 2 min"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtDesc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unidad móvil asignada y en ruta hacia tu ubicación."
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutNotificacion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:id="@+id/layoutIcon2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvIcon2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/listo"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:id="@+id/viewLineaIcon2"
+                    android:layout_width="1.5dp"
+                    android:layout_height="40dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutTexto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutTituloTiempo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTitulo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tu reporte fue validado"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/txtTiempo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hace 10 min"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtDesc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Centro de comando ha clasificado la emergencia y está coordinando recursos."
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutNotificacion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout android:id="@+id/layoutIcon3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvIcon3"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/recibido"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutTexto3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutTituloTiempo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTitulo3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reporte recibido exitosamente"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/txtTiempo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hace 15 min"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtDesc3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Folio de incidente generado. Aguarde instrucciones del operador."
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

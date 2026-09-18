@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/txtTituloPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu Perfil"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FF5E1A" />
+
+    <ScrollView
+        android:id="@+id/scrollPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:id="@+id/layoutFotoPerfil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/imgPerfil"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/circulo"
+                    android:src="@drawable/perfil"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tvCheckPerfil"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/circulo"
+                    android:gravity="center"
+                    android:text="✓"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtNombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carlos Eduardo Ruiz"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hospital Universitario San José"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/layoutBadgeActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#f5f5f5f5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/viewPuntoActivo"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/puntoverde" />
+
+                <TextView
+                    android:id="@+id/txtActivoEnTurno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="ACTIVO EN TURNO"
+                    android:textSize="9sp"
+                    android:textColor="#444444"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutInfoOperativa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="#f5f5f5f5"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/txtLabelInfoOperativa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INFORMACIÓN OPERATIVA"
+                    android:textSize="11sp"
+                    android:textColor="#545454"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutAmbulanciaAsignada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgAmbulanciaAsignada"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/asignada"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtLabelAmbulancia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ambulancia asignada"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txtAmbulanciaCodigo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AMB-042"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutLicencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLicencia"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/licencia"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtLabelLicencia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Licencia de conducción"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txtLicenciaVigente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#C3F6C7"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="Vigente"
+                        android:textSize="10sp"
+                        android:textColor="#0E9F6E" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutTurno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgTurno"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/turno"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtLabelTurno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Turno actual"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txtTurnoHorario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mañana (06:00 - 14:00)"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutOpciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <LinearLayout
+                    android:id="@+id/btnEditarPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgEditar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/editar"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtEditarPerfil"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Editar perfil"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txtFlechaEditar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewDiv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+                <LinearLayout
+                    android:id="@+id/btnCambiarContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgContrasena"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/contrasena"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtCambiarContrasena"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:text="Cambiar contraseña"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtFlechaContrasena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewDiv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+                <LinearLayout
+                    android:id="@+id/btnAjustesNotificaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgAjustes"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ajustes"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtAjustesNotificaciones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ajustes de Notificaciones"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txtFlechaAjustes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewDiv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+                <LinearLayout
+                    android:id="@+id/btnAyudaSoporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgAyuda"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ayuda"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txtAyudaSoporte"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ayuda y Soporte"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txtFlechaAyuda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
+                android:background="#f5f5f5f5"
+                android:gravity="center"
+                android:text="[-> Cerrar sesión"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/btnNavInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavInicio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/inicio"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtNavInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="12sp"
+                android:textColor="#888888" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavHistorial"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavHistorial"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/historial"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtNavHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial"
+                android:textSize="12sp"
+                android:textColor="#888888" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavPerfilActivo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvIconPerfilActivo"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="@drawable/boton"
+                android:gravity="center"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

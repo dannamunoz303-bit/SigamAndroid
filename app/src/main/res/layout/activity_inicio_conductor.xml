@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tvIconSuperior"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/superior"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtSigam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="  SIGAM"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="4dp"/>
+
+        <ImageView
+            android:id="@+id/imgCampana"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@drawable/campana" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FF6A2E" />
+
+    <LinearLayout
+        android:id="@+id/layoutContenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/layoutCardEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/txtLabelEstadoActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESTADO ACTUAL"
+                android:textColor="#000"
+                android:textSize="11sp"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:id="@+id/tvEstadoDisponible"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="#FF5E1A"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Disponible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvEstadoEnServicio"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="#F5F5F5"
+                android:gravity="center"
+                android:text="En Servicio"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvEstadoFueraServicio"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="#F5F5F5"
+                android:gravity="center"
+                android:text="Fuera de Servicio"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutImagenCentral"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgIniciar"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/iniciar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutUbicacionReal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="#F5F5F5">
+
+            <ImageView
+                android:id="@+id/imgPuntoVerde"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/puntoverde" />
+
+            <TextView
+                android:id="@+id/txtUbicacionActiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Ubicación en tiempo real: Activada"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/btnNavInicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvIconInicio"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="#FF6A2E"
+                android:gravity="center"
+                android:text="⌂"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtNavInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Inicio"
+                android:textSize="10sp"
+                android:textColor="#FF6A2E"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavHistorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavHistorial"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/historial" />
+
+            <TextView
+                android:id="@+id/txtNavHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/persona" />
+
+            <TextView
+                android:id="@+id/txtNavPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

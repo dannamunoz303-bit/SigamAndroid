@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgLogoSuperior"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/superior" />
+
+        <TextView
+            android:id="@+id/txtSigam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="  SIGAM"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgPregunta"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pregunta" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#FF6A2E" />
+
+    <TextView
+        android:id="@+id/txtBienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido Ciudadano"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Centro de gestión rápida de incidentes."
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp" />
+
+    <FrameLayout
+        android:id="@+id/frameEmergencia"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circulo">
+
+        <LinearLayout
+            android:id="@+id/layoutEmergenciaInterior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgAmbulancia2"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ambulancia2" />
+
+            <TextView
+                android:id="@+id/txtReportarEmergencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reportar          Emergencia               Ahora"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/viewSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF5E1A"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Registrarse"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

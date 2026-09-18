@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/viewLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/superior"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtSigam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="  SIGAM"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="4dp"/>
+
+        <ImageView
+            android:id="@+id/imgCampana"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@drawable/campana" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FF6A2E" />
+
+    <ScrollView
+        android:id="@+id/scrollHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtTituloHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial de Servicios"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/layoutFiltros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnFiltroHoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="#f5f5f5f5"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="Hoy"
+                    android:textSize="12sp"
+                    android:textColor="#444444" />
+
+                <TextView
+                    android:id="@+id/btnFiltroSemana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="#FF5E1A"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="Esta semana"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/btnFiltroMes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="#f5f5f5f5"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="Este mes"
+                    android:textSize="12sp"
+                    android:textColor="#444444" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutResumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutServiciosCompletados"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtLabelCompletados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SERVICIOS\nCOMPLETADOS"
+                        android:textSize="10sp"
+                        android:textColor="#545454"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/txtNumCompletados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="14"
+                        android:textSize="28sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewDivisorResumen"
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="#898989" />
+
+                <LinearLayout
+                    android:id="@+id/layoutTiempoPromedio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtLabelPromedio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TIEMPO\nPROMEDIO"
+                        android:textSize="10sp"
+                        android:textColor="#545454"
+                        android:gravity="center" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutValorPromedio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/txtNumPromedio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="32"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txtMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginBottom="6dp"
+                            android:text="min"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="#F5F5F5F5"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutHeaderCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtFechaCard1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="24 OCT 2023 • 14:30"
+                        android:textSize="11sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoCard1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="#FF5E1A"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="COMPLETADO"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTituloCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Código Rojo - Trauma"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtUbicacionCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text=" ◎ Av. Insurgentes Sur 1234, Col. Del Valle"
+                    android:textSize="12sp"
+                    android:textColor="#545454" />
+
+                <View
+                    android:id="@+id/viewDivCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#89898989" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFooterCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLabelTiempoCard1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TIEMPO TOTAL DEL SERVICIO"
+                        android:textSize="10sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtTiempoCard1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="45 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="#f5f5f5f5"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutHeaderCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtFechaCard2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="24 OCT 2023 • 09:15"
+                        android:textSize="11sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoCard2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="#FF5E1A"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="COMPLETADO"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTituloCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Traslado Programado"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtUbicacionCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="◎ Hospital General -> Clínica 42, Centro Histórico"
+                    android:textSize="12sp"
+                    android:textColor="#545454" />
+
+                <View
+                    android:id="@+id/viewDivCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#898989" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFooterCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLabelTiempoCard2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TIEMPO TOTAL DEL SERVICIO"
+                        android:textSize="10sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtTiempoCard2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="#f5f5f5f5"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutHeaderCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtFechaCard3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="23 OCT 2023 • 21:00"
+                        android:textSize="11sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoCard3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="#FF5E1A"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="COMPLETADO"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTituloCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Código Amarillo - Cardíaco"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtUbicacionCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="◎ Paseo de la Reforma 505, Cuauhtémoc"
+                    android:textSize="12sp"
+                    android:textColor="#545454" />
+
+                <View
+                    android:id="@+id/viewDivCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#898989" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFooterCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLabelTiempoCard3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TIEMPO TOTAL DEL SERVICIO"
+                        android:textSize="10sp"
+                        android:textColor="#545454" />
+
+                    <TextView
+                        android:id="@+id/txtTiempoCard3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/layoutBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/btnNavInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavInicio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/inicio"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtNavInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="13sp"
+                android:textColor="#888888" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavHistorialActivo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvIconHistorialActivo"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:background="@drawable/historiall"
+                android:gravity="center"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnNavPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgNavPerfil"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/persona"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtNavPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textSize="13sp"
+                android:textColor="#888888" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

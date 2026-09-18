@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;-"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtTiempoDistancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="12 min • 3.8 km"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineaNaranja"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FF6A2E" />
+
+    <FrameLayout
+        android:id="@+id/layoutMapaContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imgGuia"
+            android:layout_width="410dp"
+            android:layout_height="700dp"
+            android:src="@drawable/guia"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/layoutCardDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="14dp"
+            android:elevation="6dp">
+
+            <TextView
+                android:id="@+id/txtLabelDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DESTINO"
+                android:textSize="12sp"
+                android:textColor="#545454" />
+
+            <TextView
+                android:id="@+id/txtDestinoNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hospital Central San Martín"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtDestinoDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Calle 5 #9-23, AV. Principal"
+                android:textSize="12sp"
+                android:textColor="#545454" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMarkerDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="184dp"
+            android:layout_marginBottom="88dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/viewSpacerMarker"
+                android:layout_width="20dp"
+                android:layout_height="16dp">
+
+            </View>
+
+            <TextView
+                android:id="@+id/txtMarkerDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="Destino"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="13dp">
+
+            <TextView
+                android:id="@+id/btnConfirmarLlegada"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_redondo"
+                android:gravity="center"
+                android:text="CONFIRMAR LLEGADA"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
