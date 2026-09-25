@@ -112,26 +112,6 @@
                 android:text="Iniciar sesión"
                 android:textAllCaps="false" />
 
-            <!-- BOTONES NUEVOS PARA TU VIDEO DE LAS 22 PANTALLAS -->
-            <Button
-                android:id="@+id/btnUsuario"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="#FF5E1A"
-                android:text="ENTRAR COMO USUARIO"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btnConductor"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#FF5E1A"
-                android:text="ENTRAR COMO CONDUCTOR"
-                android:textAllCaps="false" />
 
         </LinearLayout>
     </LinearLayout>
